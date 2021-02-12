@@ -16,3 +16,10 @@ print (arr)
 
 
 # set와 tuple 개념 잡기
+
+# $ git config --global user.name "jaehan.kim"
+
+# $ git config --global user.email "mju6013@naver.com"
+
+
+# $ git config --global --list
