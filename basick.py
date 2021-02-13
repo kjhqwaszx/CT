@@ -1,5 +1,5 @@
-# 파이썬 기본 개념정리
-# https://wikidocs.net/book/1553
+
+
 
 # 값 입력
 a = int(input())
@@ -17,9 +17,3 @@ print (arr)
 
 # set와 tuple 개념 잡기
 
-# $ git config --global user.name "jaehan.kim"
-
-# $ git config --global user.email "mju6013@naver.com"
-
-
-# $ git config --global --list
