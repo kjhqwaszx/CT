@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과</title>
+    </head>
+    <body>
+        <script>
+            function solution(n){
+                let front_answer="";
+                let mid_answer="";
+                let end_answer="";
+                function DFS(v){
+                    if(v>7) return;
+                    else{
+                        front_answer+=(v+' '); // 전위순위
+                        DFS(v*2);
+                        mid_answer+=(v+' '); //중위순위
+                        DFS(v*2+1);
+                        end_answer+=(v+' '); // 후위순위
+                    }
+                }
+                DFS(n);
+                return front_answer;
+            }
+
+            console.log(solution(1));
+        </script>
+    </body>
+</html>

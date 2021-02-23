@@ -1,6 +1,9 @@
 # 파이썬 기본 개념정리
 # https://wikidocs.net/book/1553
 
+#파이썬 유용한 코드
+# https://velog.io/@johnque/%ED%8C%8C%EC%9D%B4%EC%8D%AC-%EC%9C%A0%EC%9A%A9%ED%95%9C-%EC%BD%94%EB%93%9C%EB%93%A4
+
 # Scalar Type
 int, float, bool, None
 

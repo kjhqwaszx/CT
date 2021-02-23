@@ -1,6 +1,4 @@
 
-
-
 # 값 입력
 a = int(input())
 arr = list(map(int,input().split(' ')))
@@ -14,6 +12,4 @@ arr = [1, 2, 3, 4]
 arr = [(i, idx) for idx, i in enumerate(arr)]
 print (arr)
 
-
-# set와 tuple 개념 잡기
 
