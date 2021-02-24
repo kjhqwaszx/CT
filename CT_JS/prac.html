@@ -5,24 +5,23 @@
     </head>
     <body>
         <script>
-            function solution(n, m){
-                let answer=[];
-                let tmp = Array.from({length:m},()=>0)
-                for(let i=1; i<=n; i++){
-                    
-                    for(let j =1; j<=n; j++){
-                        if(i===j) continue
-                        let k=0;
-                        tmp[k]=i
-                        k++
-                        tmp[k]=j
-                        answer.push(tmp.slice())
-                    }
+            function solution(s){
+                let answer="";
+                let tmp = new Map()
+                
+                for(let x of s.split('')){
+                    if(tmp.has(x)) tmp.set(x,tmp.get(x)+1)
+                    else tmp.set(x,1)
                 }
+                tmp.forEach((val,key)=>{
+                    
+                    if(val % 2 !=0) answer++
+                })
+                
                 return answer;
             }
 
-            console.log(solution(3, 2));
+            console.log(solution("aabbaccd"));
         </script>
     </body>
 </html>
