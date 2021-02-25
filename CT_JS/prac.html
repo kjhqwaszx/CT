@@ -5,24 +5,22 @@
     </head>
     <body>
         <script>
-            function solution(n, m){
-                let answer=[];
-                let tmp = Array.from({length:m},()=>0)
-                for(let i=1; i<=n; i++){
-                    
-                    for(let j =1; j<=n; j++){
-                        if(i===j) continue
-                        let k=0;
-                        tmp[k]=i
-                        k++
-                        tmp[k]=j
-                        answer.push(tmp.slice())
-                    }
+            
+            let animal ={
+                eats: true,
+                walk(){
+                    console.log('동물이 걷습니다.')
                 }
-                return answer;
             }
 
-            console.log(solution(3, 2));
+            
+            let rabbit = {
+                jumps:true,
+                __proto__:animal
+            }
+
+            rabbit.walk();
+            
         </script>
     </body>
 </html>

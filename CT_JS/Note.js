@@ -172,3 +172,24 @@ answer = str.filter((v, i) => {
 })
 
 
+
+///  #### 자바스크립트 상속과 프로토타입 ( https://shlee1353.github.io/2019/07/05/js-prototype-inheritance/ )
+
+// 자바스크립트는 클래스라는 개념대신 기존의 객체를 복사하여 새로운 객체를 생성하는 프로토타입 언어이다.
+// prototype은 자신을 원형으로 만들어질 새로운 객체들에게 줄 속성
+// proto는 prototype에 대한 정보이다.
+// 함수를 정의하면 함수와 연결되는 prototye Object도 함께 생긴다.
+// 즉, Prototype Object는 자기 자신의 분신이며 다른 객체가 참조할 프로토 타입이 된다.
+
+function Person(){}
+var joon = new Person();
+var jisoo = new Person();
+
+Person.prototype.getType=function(){
+    return "사람"
+}
+console.log(joon.getType()) // 사람
+console.log(jisoo.getType()) // 사람
+
+
+
