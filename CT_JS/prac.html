@@ -5,23 +5,25 @@
     </head>
     <body>
         <script>
-            function solution(s){
-                let answer=[];
-                let tmp = new Map()
-                
-                for(let x of s.split('')){
-                    if(tmp.has(x)) tmp.set(x,tmp.get(x)+1)
-                    else tmp.set(x,1)
+            function solution(need, plan){
+                let answer="YES";
+                let tmp = need.split('')
+
+                for(let x of plan){
+                    if(tmp.includes(x)){
+                        if(x!==tmp[0]) return "No"
+                        else{
+                            tmp.shift()
+                        }
+                    }
                 }
-                tmp.forEach((val,key)=>{
-                    
-                    if(val % 2 !=0) answer.push(key)
-                })
-                
+                if(tmp.length!==0) return "No"
                 return answer;
             }
 
-            console.log(solution("aabbaccd"));
+            let a="CBA";
+            let b="CBDAGE";
+            console.log(solution(a, b));
         </script>
     </body>
 </html>

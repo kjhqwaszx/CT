@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과</title>
+    </head>
+    <body>
+        <script>
+            //생성자 함수
+            const bmw = function(color){
+                this.color = color
+            };
+            
+            //생성자함수가 생성하는 객체에 __proto__를 설정하는 방법
+            bmw.prototype.wheels = 4;
+            bmw.prototype.drive=function(){
+                console.log('drive..')
+            }
+
+            x5 = new bmw("red")
+            x4 = new bmw("blue")
+            console.log(x5.drive())
+         </script>
+    </body>
+</html>

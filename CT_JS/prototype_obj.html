@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과</title>
+    </head>
+    <body>
+        <script>
+            // 객체에서 property를 접근할때 없으면 __proto__ 탐색한다.
+            const car = {
+                wheels : 4,
+                drive(){
+                    console.log("drive..")
+                }
+            }
+            const bmw ={
+                navigataion: 1,
+                color: "red",
+                __proto__:car // car 상속
+            }
+            
+            // bmw.__proto__=car // 상속
+            const x5 ={
+                max : 6,
+                __proto__:bmw // bmw 상속
+            }
+
+            // x5.__proto__=bmw // 상속
+            
+            for(let p in x5){
+                if(x5.hasOwnProperty(p)) console.log('my: ', p)
+                else console.log('parents: ', p)
+            }
+            // console.log(x5.min) 
+        </script>
+    </body>
+</html>
