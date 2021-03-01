@@ -12,15 +12,15 @@
                     this.data = a[i]
                     
                 }
-                
+
                 objFnc.prototype.value=function(){
                     return this.data
                 }
 
                 for(let i=0; i<a.length ; i++){
-                    var tmp = new objFnc(i)
+                    var obj = new objFnc(i)
                     objArr.push(
-                        tmp
+                        obj
                     )
                 }
                 return objArr
@@ -32,6 +32,7 @@
             console.log(T[1].value())
             console.log(T[0].value===T[1].value) 
             console.log(T[0].hasOwnProperty('value'))
+            console.log(T[1].hasOwnProperty('value'))
             
         </script>
     </body>
