@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과</title>
+    </head>
+    <body>
+        <script>
+            function solution(S) {
+                let answer=0
+                let tmp = S.split('')
+                let sH = new Map();
+                let flag =1
+
+                for(let x of tmp){
+                    if(sH.has(x)) sH.set(x,sH.get(x)+1)
+                    else sH.set(x,1)
+                }
+
+                while(true){
+                    sH.set('B',sH.get('B')-1)
+                    sH.set('A',sH.get('A')-1)
+                    sH.set('L',sH.get('L')-2)
+                    sH.set('O',sH.get('O')-2)
+                    sH.set('N',sH.get('N')-1)
+                    
+                    sH.forEach((val,key)=>{
+                        if(sH.get(key) < 0){
+                            flag=0
+                        }
+                    })
+                    if(flag===0) break;
+                    answer ++
+                }
+                return answer
+            }
+            console.log(solution("BAONXXOLL"))
+            console.log(solution("BAOOLLNNOLOLGBAX"))
+            console.log(solution("QAWABAWONL"))
+            console.log(solution("ONLABLABLOON"))
+        </script>
+    </body>
+</html>
