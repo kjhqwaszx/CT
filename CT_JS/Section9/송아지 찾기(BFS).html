@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과</title>
+    </head>
+    <body>
+        <script>
+            function solution(s, e){  
+                let answer=0;
+                let ch = Array.from({length:10001},()=>0) // 해당 위치 방문 여부
+                let dis = Array.from({length:10001},()=>0) // 해당 위치에 몇번만에 왔는지
+                let queue=[]
+                queue.push(s)
+                ch[s]=1
+                dis[s]=0
+                
+                while(queue.length){
+                    let x = queue.shift()
+                    for(let nx of [x-1, x+1, x+5]){
+                        if(nx===e) return dis[x]+1  // 도착지점 도달. return 이전 좌표 방문횟수+1 
+                        if(nx>0 && nx<10000 && ch[nx]===0){
+                            queue.push(nx)
+                            ch[nx]= 1;
+                            dis[nx] = dis[x]+1
+                        }
+                    }
+                }
+                
+                return answer;
+            }
+            console.log(solution(5, 14));
+        </script>
+    </body>
+</html>
+
+
