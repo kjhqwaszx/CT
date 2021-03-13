@@ -5,35 +5,23 @@
     </head>
     <body>
         <script>
-            function solution(a) {
-                let objArr = []
+            function solution(n){  
+                let answer=0;
                 
-                const objFnc = function(i){
-                    this.data = a[i]
-                    
+                function DFS(sum) {
+                    if(sum>n) return;
+                    if(sum===n){
+                        answer++
+                    }else{
+                        for(let i=1; i<3; i++){
+                            DFS(sum+i)
+                        }
+                    }
                 }
-
-                objFnc.prototype.value=function(){
-                    return this.data
-                }
-
-                for(let i=0; i<a.length ; i++){
-                    var obj = new objFnc(i)
-                    objArr.push(
-                        obj
-                    )
-                }
-                return objArr
+                DFS(0)
+                return answer;
             }
-
-            let a = [4,2]
-            T = solution(a)
-            console.log(T[0].value())
-            console.log(T[1].value())
-            console.log(T[0].value===T[1].value) 
-            console.log(T[0].hasOwnProperty('value'))
-            console.log(T[1].hasOwnProperty('value'))
-            
+            console.log(solution(10));
         </script>
     </body>
 </html>

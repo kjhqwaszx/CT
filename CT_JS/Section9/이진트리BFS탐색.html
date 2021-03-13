@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과</title>
+    </head>
+    <body>
+        <script>
+            /*
+                최단거리를 구하는 문제에서 주로 사용된다. ( 레벨 탐색)
+            */
+            function solution(board){  
+                let answer="";
+                let queue=[];
+
+                queue.push(1)
+
+                while(queue.length !== 0){
+                    let v = queue.shift()
+                    answer += (v+" ")
+                    for(let nv of [v*2, v*2+1]){ // nv는 v*2 와 v*2+1 두번 돈다.
+                        if(nv>7){
+                            continue; // 값을 넣지 않겠다.
+                        }
+                        queue.push(nv) // 연결된 값들을 넣는다.
+                    }
+                }
+                return answer;
+            }
+
+            console.log(solution());
+        </script>
+    </body>
+</html>
