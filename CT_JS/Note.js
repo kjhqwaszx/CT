@@ -1,3 +1,89 @@
+// DFS
+// 재귀호출 방식으로 DFS 함수는 if, else 로 구성한다.
+// if문에는 break point, else에는 조건에 따라 재귀 호출
+
+function DFS(v){ // 부분집합구하기
+    if(v === n+1){
+        let tmp = ""
+        for(let i=1; i<=n; i++){
+            if(ch[i]===1) tmp+= i +' '
+        }
+        if(tmp.length > 0) answer.push(tmp.trim())
+    }else{
+        ch[v]=1
+        DFS(v+1)
+        ch[v]=0
+        DFS(v+1)
+    }
+}
+function DFS(i,sum){ // 합이같은 부분집합
+    if(flag) return
+    if(i===arr.length){
+        if(sum===total-sum){
+            answer="Yes"
+            flag=1
+            return
+        }
+    }else{
+        DFS(i+1,sum+arr[i])
+        DFS(i+1,sum)
+    }
+}
+function DFS(i,sum) { // 배열의 합중 c에 가장 가까운 합 ...
+    if(sum > c) return
+    
+    if(i===arr.length){
+        if(answer<sum){
+            answer=sum
+            return
+        }
+    }else{
+        DFS(i+1,sum+arr[i])
+        DFS(i+1,sum)
+    } 
+}
+function DFS(x,y){ //미로탐색
+    if(x===6 && y===6){
+        answer++
+    }else{
+        for(let k=0; k<4; k++){
+            let nx = x+dx[k]
+            let ny = y+dy[k]
+
+            if(nx>=0 && nx<=6 && ny>=0 && ny<=6 && board[nx][ny]===0){
+                board[nx][ny]=1
+                DFS(nx,ny)
+                board[nx][ny]=0
+            }
+        }
+    }
+} 
+
+//BFS
+// queue를 사용하고 while(queue.length)을 사용한다.
+// while 안에서는 let x = queue.shift() 를 통해 연결된 값을 조건에 맞게 넣어준다.
+while(queue.length !== 0){//이진트리탐색
+    let v = queue.shift()
+    answer += (v+" ")
+    for(let nv of [v*2, v*2+1]){ // nv는 v*2 와 v*2+1 두번 돈다.
+        if(nv>7){
+            continue; // 값을 넣지 않겠다.
+        }
+        queue.push(nv) // 연결된 값들을 넣는다.
+    }
+}
+while(queue.length){ //송아지찾기
+    let x = queue.shift()
+    for(let nx of [x-1, x+1, x+5]){
+        if(nx===e) return dis[x]+1  // 도착지점 도달. return 이전 좌표 방문횟수+1 
+        if(nx>0 && nx<10000 && ch[nx]===0){
+            queue.push(nx)
+            ch[nx]= 1;
+            dis[nx] = dis[x]+1
+        }
+    }
+}
+
 // for of 구문 ( 문자열의 경우 문자 하나하나)
     arr = [1,2,3] 
     for(let  x of arr ){
