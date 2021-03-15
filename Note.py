@@ -1,8 +1,10 @@
 # 파이썬 기본 개념정리
 # https://wikidocs.net/book/1553
+# https://wikidocs.net/2
 
 #파이썬 유용한 코드
 # https://velog.io/@johnque/%ED%8C%8C%EC%9D%B4%EC%8D%AC-%EC%9C%A0%EC%9A%A9%ED%95%9C-%EC%BD%94%EB%93%9C%EB%93%A4
+# https: // dailyheumsi.tistory.com/67
 
 # Scalar Type
 int, float, bool, None
@@ -15,124 +17,134 @@ print("나는 {0}색과 {1}색을 좋아해요.".format("파랑","빨강")  ### 
 while c != 0:
       실행문
 
-# str 함수
+#  **** String ****                                                   *********
 
-- 문자열.lower() : 전체 소문자
-- 문자열.upper() : 전체 대문자
-- 문자열[0].isupper() : 문자열 인덱스가 대문자?
-- len(문자열) : 문자열 길이
-- 문자열.repalce("변경할 단어", "단어") : 대치
-- 문자열.index("단어") : 해당 단어(문자) 위치, 문자가 없으면 에러
-    -> = find로도 가능, find 는 찾을 문자가 없으면 return -1
-index = name.index("n") # String에서 n 위치
-print(index)
-index = name.index("n",index+1) #String에서 두번째 n위치
-print(index)
-  - 문자열.count("n") # 문자열 속  n의 개수
+# 문자열.lower() : 전체 소문자
 
-- join : 문자열을 합치는데 사용한다. 구분자가 앞에 붙음
-','.join(['a','b','cd']) => a,b,cd
+# 문자열.upper() : 전체 대문자
 
-- split : 문자열을 구분자로 나누어 list로 반환한다.
-'a,b,cd'.split(',') => ['a','b','cd']
+# 문자열[0].isupper() : 문자열 인덱스가 대문자?
 
-- partition : 구분자로 나누어 튜플 형식으로 반환한다.
-departure, _, arrival = "Seattle-Seoul".partition('-')
-(departure,'Seattle'), (_,'-'), (arrival,'Seoul')
+# len(문자열) : 문자열 길이
+
+# 문자열.repalce("변경할 단어", "단어") : 대치
+
+# 문자열.index("단어") : 해당 단어(문자) 위치, 문자가 없으면 에러
+#   -> = find로도 가능, find 는 찾을 문자가 없으면 return -1
+
+# index = name.index("n") # String에서 n 위치
+# index = name.index("n",index+1) #String에서 두번째 n위치
+
+# 문자열.count("n") : 문자열 속  n의 개수
+
+# join : 문자열을 합치는데 사용한다. 구분자가 앞에 붙음
+# ','.join(['a','b','cd']) => a,b,cd
+
+# split : 문자열을 구분자로 나누어 list로 반환한다.
+# 'a,b,cd'.split(',') => ['a','b','cd']
+
+# partition : 구분자로 나누어 튜플 형식으로 반환한다.
+# departure, _, arrival = "Seattle-Seoul".partition('-')
+# (departure,'Seattle'), (_,'-'), (arrival,'Seoul')
 
 # List :순서가 있는 수정가능한 객체의 집합 
 
-# list 함수
-- copy : list를 복사한다.
- => arr_c = arr.copy()
+# **** List 함수 ****                                                 **********
 
-- index : 리스트 안에서 해당 아이템이 index를 출력한다.
-a = ['서울','인천','제주','대전']
-a.index('인천') => 1
+# copy : list를 복사한다.
+# arr_c = arr.copy()
 
-- count : 리스트 안에서 매칭되는 갯수를 출력한다.
-a = [1,2,3,3,4,5,6]
-a.count(3) => 2
+# arr.index(val) : 리스트 안에서 해당 아이템이 index를 출력한다.
+# a = ['서울','인천','제주','대전']
+# a.index('인천') => 1
 
-- a.pop() : 배열 끝에서 제거 (10, 15, 20, 30)
-- a.clear() : 배열 초기화
-- a.extend(addList) : addList 배열을 뒤에 붙인다
+# arr.count(val) : 리스트 안에서 매칭되는 갯수를 출력한다.
+# a = [1,2,3,3,4,5,6]
+# a.count(3) => 2
 
-- in : 리스트안에 포함되어있는지 확인가능 (bool)
-a= [1,10,100]
-1 in a => True  ,  30 in a => False
+# a.pop() : 배열 끝에서 제거 (10, 15, 20, 30)
+# a.pop(index) : 배열의 index를 return하고 삭제 
 
-- append : 원소를 리스트 마지막에 추가
-a = [1,2,3]
-a.append(4) = > a= [1,2,3,4]
+# a.clear() : 배열 초기화
 
-- insert : 원하는 index에 원소를 추가
-a = [1,3,4,5]
-a.insert(1,2) # [1,2,3,4,5]
+# a.extend(addList) : addList 배열을 뒤에 붙인다
 
-- del a[1] : a의 index 1 원소를 삭제
-- a.remove(1) : a의 index 1 원소를 삭제
-- a.reverse() : 리스트를 거꾸로 뒤집는다.
-- a.sort() : 오름차순 정렬
-- a.sort(reversed=True) : 내림차순 정렬
+# val in arr : 리스트안에 포함되어있는지 확인가능 (bool)
+# a= [1,10,100]
+# 1 in a => True  ,  30 in a => False
 
-- a.sort(key=len) : 정렬 기준을 정할 수 있다.(오름차순)
- => ["일", "일이", "일이삼"]
+# append(val) : 원소를 리스트 마지막에 추가
+# a = [1,2,3]
+# a.append(4) = > a= [1,2,3,4]
 
+# insert(index,val) : 원하는 index에 원소를 추가
+# a = [1,3,4,5]
+# a.insert(1,2) # [1,2,3,4,5]
 
+#  del a[1] : a의 index 1 원소를 삭제
 
-#List Slicing
-id="012345-789abcd"
-print("id : " + id[0:2]) # index 2 전까지 갖고온다 ( 0, 1 출력)
--> id[ 0:2 ] = id[ :2 ] # 처음부터 시작할 경우 0 생략가능
-(01 출력)
--> id[ 7:14 ] = id[ 7: ]  # 맨 마지막까지 출력할경우 생략가능
-= id[ -7: ] #뒤에서부터 카운트해서 가져오는경우 d= -13, c=-12 ... 7 = -7 
- ( 모두 789abcd 출력된다 ) 
+# a.remove(val) : a의 첫번쨰 val을 삭제
 
-# 튜플 : 불변한 순서가 있는 객체의 집합. List와 비슷하지만 값을 변경할 ㅅ ㅜ없다.
-t = (1,'korea',2,3)  # list와 마찬가지로 인덱스 접근(t[0]), len(t) ... 가능
+# a.reverse() : 리스트를 거꾸로 뒤집는다.
 
-# 튜플안에 튜플이 올 수 있다.
-a = ((1,2), (3,4), (5,6))
-a[0] = (1,2)  , a[0][1] = 2
+# a.sort() : 오름차순 정렬
 
-# 딕셔너리 : key, value로 매핑되어 있는 순서가 없는 집합이다.
-dic ={
-  'a' : 1,
-  'b' : 2
-}
-# 순서가 없기 때문에 index가 아닌 key로 접근해야 한다.
-print(dic['a']) => 1 
-dic['a'] = 3
-
-# set : 순서가 없고, 유니크한 값을 갖는다.
+# a.sort(reverse=True) : 내림차순 정렬
+# a.sort(key=len) : 정렬 기준을 정할 수 있다.(오름차순)
+# => ["일", "일이", "일이삼"]
 
 
 
+# Dictionary : key : value 로 구성된 집합
+# **** Dictionary ****                                                  ***********
+#   dic = {
+#           name:'jaehan'
+#         }
+
+# dic[key] : 해당 key 값의 value 출력 ( key가 없으면 오류)
+
+# dic[key]=val -> key : value 추가
+
+# dic.get(key) : 해당 key 값의 value 출력 ( key가 없으면  None)
+# dic.get(key,val) : 해당 key값이 없으면 val값으로 출력 ( val추가는 아니다. )
 
 
-객체
-cabinet={
-  1: "유재석",
-  2: "김태호"
-  "A-1" : 하하
-}
-  - print( cabinet[1] ) : 유재석     #키 값이 없을 경우 에러
-  - print( cabinet["A-1"] ) : 하하    #키 값이 없을 경우 에러
-  - print( cabinet.get(1) ) : 유재석  # 키값이 없을경우 None 출력
-  - cabinet.get(1,"사용가능") : 키값이 없을경우 사용가능 출력
-  - print( 3 in cabinet ) : 키값 3이 존재하는지 ( True 출력 )
-  - cabinet["A-10"]="정형돈" : A-10 키값으로 정형돈 추가, 이미 키값이 있으면 업데이트
-  - del cabinet["A-1"] : key , val 삭제
-  - print( cabinet.keys()) : 객체 키값 출력
-  - print( cabinet.values()) : 객체 값 출력
-  - print( cabinet.items()) : 객체 키, 값 출력
-  - cabinet.clear() : 객체 초기화
 
-튜플 (tuple) : 객체처럼 변경이 불가능하다.   
-menu = ("돈까스", "치즈까스")
-(name, age, hobby) = ("유재석", 25, "코딩")  : 튜플 만들기
+# del dic[key] : key 삭제 
+
+# keys = list(dic.keys()) : 딕션어리의 key들을 list로 출력한다.
+# values = list(dic.values())
+# key_val = list(dic.items())
+
+# key in dic : 딕션어리 안에 key값이 있는지 ( bool )
+
+
+# 튜플 : List와 비슷하지만 값을 변경할 수 없다. ( ) 로 감싸져있다.
+
+#  ***** Tuple *****                                                                *********
+
+# t1 = (1,)  : 하나의 요소를 갖는 경우에는 마지막에 , 를 붙여주어야 한다.
+
+# 요소를 삭제하거나 변경 시 에러 발생 ( del[0], t1[0] = 1 불가능 )
+
+# t1 = (1,2,'a',b')
+# t2 =('c','d')
+# t[0] ->1     t[2] -> 'a'
+
+# t1+t1 -> (1,2,'a','b',c','d')  #### 튜플 요소 추가는 가능
+
+# (name,age,addr) = ('jaehan', 25, 'seoul')
+# print(name) -> 'jaehan', print(age) -> 25, print(addr) ->'seoul'
+
+
+# ***** set *****                                                                                     ****************
+#  중복된 요소를 갖지않는다. 순서가 없다.
+
+#s1=set('hello')
+#print(s1) -> {'e','h','l',o}     ## l 중복 X
+
+# set : 순서가 없고, 중복
+
 
 세트 (set) : 중복x, 순서 없음
 my_set = { 1,2,3,3,3 }

@@ -6,22 +6,22 @@
     <body>
         <script>
             function solution(s){
-                let answer=[];
+                let answer=0;
                 let tmp = new Map()
                 
                 for(let x of s.split('')){
                     if(tmp.has(x)) tmp.set(x,tmp.get(x)+1)
                     else tmp.set(x,1)
                 }
+
                 tmp.forEach((val,key)=>{
-                    console.log(val,key)
-                    if(val % 2 !=0) answer.push(key)
+                    if(val % 2 !=0) answer++
                 })
                 
                 return answer;
             }
 
-            console.log(solution("aabbaccd"));
+            console.log(solution("aabbbddd"));
         </script>
     </body>
 </html>
