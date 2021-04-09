@@ -105,7 +105,7 @@ while(queue.length){ //송아지찾기
 
 //replace( word|type, newWord )
 str="abcda"
-str.replace('a','A') // AbcdA
+str.replace('a','A') // Abcda
 str.replace(/a/g,'A') // AbcdA
 str.replace(/a/i, 'A') // Abcda
 str.replace(/[^a-z]/g,'') // 알파벳 소문자가 아니면 뺀다.
@@ -203,7 +203,7 @@ let sum = arr.reduce((acc,cur)=>acc+cur,0)
 
 //2. 최대값 구하기
 let arr = [1,2,3,4,5]
-let max = arr.reduce((max,cur)=>Math.max(max,cur),0)
+let answer = arr.reduce((max,cur)=>Math.max(max,cur),0)
 
 //findIndex 
 let arr = [1,2,3,4,5]
@@ -229,6 +229,10 @@ arr.includes(4,-1) //true
 let tmp = new Set()
 tmp.add(card[i] + card[j] + card[k]) // 중복값이 있을경우 넣지 않는다.
 let arr = Array.from(tmp).sort((a,b)=>b-a) // 배열로 만든 후 내림차순 정렬
+
+tmp.add(3) 
+tmp.delete(3) // 3제거
+tmp.clear() // 초기화
 
 // #### Map ####
 // [key,value] 형식으로 저장되는 객체

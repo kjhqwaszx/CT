@@ -5,23 +5,21 @@
     </head>
     <body>
         <script>
-            function solution(n){  
-                let answer=0;
-                
-                function DFS(sum) {
-                    if(sum>n) return;
-                    if(sum===n){
-                        answer++
-                    }else{
-                        for(let i=1; i<3; i++){
-                            DFS(sum+i)
-                        }
+            function solution(){  
+                arr = [1,2,3,3,4,5,5,5,5,5];
+                answer = []
+
+                arr.forEach((v,i)=>{
+                    if(arr.indexOf(v)===i){
+                        answer.push(v)
                     }
-                }
-                DFS(0)
-                return answer;
+                })
+                console.log(answer)
+                
+                
+                
             }
-            console.log(solution(10));
+            solution();
         </script>
     </body>
 </html>
