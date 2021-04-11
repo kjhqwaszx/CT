@@ -5,21 +5,28 @@
     </head>
     <body>
         <script>
-            function solution(){  
-                arr = [1,2,3,3,4,5,5,5,5,5];
-                answer = []
+            function solution(times){
+                let answer=0;
+                let tmp = new Map();
 
-                arr.forEach((v,i)=>{
-                    if(arr.indexOf(v)===i){
-                        answer.push(v)
+                for( let x of times){
+                    for(let i = x[0]; i<x[1]; i++){
+                        if(tmp.has(i)) tmp.set(i,tmp.get(i)+1)
+                        else tmp.set(i,1)
+                    }
+                }
+                tmp.forEach((key,val)=>{
+                    if(key>answer){
+                        answer=key
                     }
                 })
-                console.log(answer)
                 
-                
-                
+
+                return answer;
             }
-            solution();
+
+            let arr=[[14, 18], [12, 15], [15, 20], [20, 30], [5, 14]];
+            console.log(solution(arr));
         </script>
     </body>
 </html>
