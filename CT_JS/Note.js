@@ -2,6 +2,14 @@
 // 재귀호출 방식으로 DFS 함수는 if, else 로 구성한다.
 // if문에는 break point, else에는 조건에 따라 재귀 호출
 
+//else에 작성되는 내용은 하나의 노드에서 뻗어나가는 경우들이다.
+
+// 부분집합을 이용해서 문제를 풀 경우는 else 에서 재귀 두번호출 ( 포함할지, 포함하지 않을지)
+// if의 break 조건은 모든 노드를 갔다온 경우 -> 포함관계(부분집합) 형성 후 계산
+
+// 수열을 이용해서 문제를 풀 경우에는 else for문을 통해 노드갯수만큼 재귀호출 .
+// if의 break 조건은 문제에 따라.
+
 function DFS(v){ // 부분집합구하기
     if(v === n+1){
         let tmp = ""
@@ -61,7 +69,7 @@ function DFS(x,y){ //미로탐색
 
 //BFS
 // queue를 사용하고 while(queue.length)을 사용한다.
-// while 안에서는 let x = queue.shift() 를 통해 연결된 값을 조건에 맞게 넣어준다.
+// while 안에서는 let v = queue.shift() 를 통해 연결된 값을 조건에 맞게 넣어준다.
 while(queue.length !== 0){//이진트리탐색
     let v = queue.shift()
     answer += (v+" ")

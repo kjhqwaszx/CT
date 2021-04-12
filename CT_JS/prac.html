@@ -5,28 +5,35 @@
     </head>
     <body>
         <script>
-            function solution(times){
-                let answer=0;
-                let tmp = new Map();
+            function solution(s, e){  
+                let answer=0
+                let ch = Array.from({length:10000}, ()=>0)        
+                let dis = Array.from({length:10000}, ()=>0)
+                let queue = []
+                queue.push(s)
+                dis[s]=0;
+                ch[s]=1
 
-                for( let x of times){
-                    for(let i = x[0]; i<x[1]; i++){
-                        if(tmp.has(i)) tmp.set(i,tmp.get(i)+1)
-                        else tmp.set(i,1)
+                while(queue.length){
+                    let x = queue.shift()
+
+                    for(let nx of [x-1, x+1, x+5]){
+                        if(nx===e) return dis[x] +1
+                        if(nx>0 && nx<10000 && ch[nx]===0){
+                            ch[nx]=1
+                            dis[nx]=dis[x]+1
+                            queue.push(nx)
+                        }
                     }
-                }
-                tmp.forEach((key,val)=>{
-                    if(key>answer){
-                        answer=key
-                    }
-                })
                 
+                }
 
+        
                 return answer;
             }
-
-            let arr=[[14, 18], [12, 15], [15, 20], [20, 30], [5, 14]];
-            console.log(solution(arr));
+            console.log(solution(8, 15));
         </script>
     </body>
 </html>
+
+
