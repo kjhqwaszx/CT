@@ -5,24 +5,32 @@
     </head>
     <body>
         <script>
-           function solution(v) {
-    var answer = [];
-    let tmp_x = new Map()
-    let tmp_y = new Map()
-    // [[1,4],[3,4],[3,10]] 1,10
-    // [[1,1],[2,2],[1,2]] 2,1
-     for(let x of v){
-        //x 설정
-        if(tmp_x.has(x[0])) tmp_x.set(x[0], tmp_x.get(x[0])+1)
-        else(tmp_x.set(x[0],1))
-        
-        if(tmp_y.has(x[1])) tmp_y.set(x[1], tmp_x.get(x[1])+1)
-        else(tmp_y.set(x[1],1))
-    }
-    console.log(tmp_x, tmp_y)
-    return answer;
-}
-            console.log(solution(8, 15));
+            function solution(s, e){  
+                let answer=0;
+                let dis= Array.from({length:10000}, ()=>0)
+                let ch= Array.from({length:10000}, ()=>0)
+                let queue = []
+                
+                queue.push(s)
+                dis[s]=0
+                ch[s]=1
+
+                while(queue.length){
+                    let x = queue.shift()
+                    for(let nx of [x-1, x+1, x+5]){
+                        if(nx === e) return dis[x]+1
+                        if(nx>0 && nx<10000 && ch[nx]===0){
+                            ch[nx]=1
+                            dis[nx]= dis[x] +1
+                            queue.push(nx)
+                        }
+                    }
+                }
+                
+                    
+                return answer
+            }
+            console.log(solution(5, 14));
         </script>
     </body>
 </html>

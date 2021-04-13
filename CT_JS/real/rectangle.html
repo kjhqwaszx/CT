@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+    </head>
+    <body>
+        <script>
+           function solution(v) {
+                var answer = [];
+                let tmp_x = [];
+                let tmp_y = [];
+                
+                for(let x of v){
+                    //x 좌표 구하기
+                    if(tmp_x.includes(x[0])) tmp_x.splice(tmp_x.indexOf(x[0]),1)
+                    else tmp_x.push(x[0])
+
+                    //y 좌표 구하기
+                    if(tmp_y.includes(x[1])) tmp_y.splice(tmp_y.indexOf(x[1]),1)
+                    else tmp_y.push(x[1])
+                }
+
+                answer.push(tmp_x[0],tmp_y[0])
+                
+                return answer;
+            }
+            console.log(solution([[1,4],[3,4],[3,10]])); // [1,10]
+            console.log(solution([[1,1],[2,2],[1,2]])); // [2,1]
+            
+        </script>
+    </body>
+</html>
+
+
