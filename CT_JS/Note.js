@@ -168,6 +168,12 @@ arr.forEach(el=>console.log(el)) // 1,2,3,4,5
 let arr = [1,2,3,4]
 let arr_cpy = arr.slice() // [1,2,3,4]
 
+//arr.some(el=> 조건) 배열 안 요소들 확인
+let arr = [1, 2, 3, 4];
+let answer = arr.some(el=>el<5) //false
+let answer = arr.some(el=>el>5) //true
+
+
 // push, pop, shift, unshift
 arr = []
 arr.push(1) // 1
