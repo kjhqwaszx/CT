@@ -1,11 +1,9 @@
 PART5.  ( 10번 문제 )
 * 특정 주제에 대한 질문에 자신의 의견을 밝힌 후 그에대한 이유 말하기 ( 11번 문제 )
 * 말 최대한 많이 하기
+* 할말없으면 거짓예시 만들기
 * 준비시간 30초 / 대답시간 60초
-
-* 노트테이킹 필요
-  -> LC를 들으면서 문제점 적기.
-  -> 준비시간 45초동안 해결책 및 추가문장 적기
+  
 * 문제 유형
  - 찬반형 질문 : 의견 선택 후 의견 말하기
  - 선택형 질문 : 세가지 중 가장 중요하게 생각하는것은?
@@ -17,13 +15,14 @@ PART5.  ( 10번 문제 )
 
 * 템플릿
   - 서론
-   I [agree/disagree] that 나의 의견 for a few reasons.
+   I [agree/disagree] that 나의 의견.
+   There are some reasons.
   - 이유1
-   Firstly, ~
+   the first point i want to say is that, ~
   - 근거 1
    [ To be specific, ~ / For example ~ ]
   - 이유2 
-   Secondly, ~
+   the second point is that, ~
   - 근거2
    [ For example ~ /  To be specific, ~ ] 
   - 마무리
@@ -32,20 +31,92 @@ PART5.  ( 10번 문제 )
    (시간 부족 시) That's all
 
 -----------------------------------------------------
+
+ - Being kind is good, but doing a good job is a priority in the company. : ~도 좋다 하지만 ~가 더 중요하다.
+-----------------------------------------------------
+< Part 6. 유용한 표현 >
+      
+      #### 직장생활
+
+ [ 광고를 하는것이 성공에 필수적인지 ]_동의
+  1. (잠재고객을 끌어올 수 있음)
+    advertisement can attract potential customers to the company.
+    to be speicific, company can't be success without customers. if they post their advertisement, they will get more customers
+  2. (대중들에게 회사 이미지를 각인시킬 수 있다.)
+    The advertisement can leave company's positive image in the public's mind.
+    so, Many people will choose theses company's product when they buy things.
+
+ [ 직원들에게 투자하는것이 회사가 성공하는 가장 좋은 방법인지 ]_동의
+  1. (직원들은 회사에서 가장 중요한 구성요소임)
+    Employees are the most important element in the company.
+    To be specific, business can't be success without Employee. so company have to invest to their employee
+  2. (회사가 빠르게 성장할 수 있다.)
+    The company will grow up faster
+    To be specific, if company invest to their employee, they will be able to expert.
+
+ [ 창의적인 사람이 리더가 되어야한다고 생각하는지 ]_동의
+  1. (새롭고 다른 방식으로 문제를 해결함)
+   A creative person will solve problems with new and various ways.
+   To be specific, it can be more effective than existing methods
+  2. (경쟁력을 갖출 수 있다.)
+   A creative leaders can lead their business well
+   To be specific, creative ideas are very important things to success. also, it can be competitive(컴페러티브)
+ 
+ [ 친절한 사람이 가장 좋은 동료라고 생각하는지 ]_반대
+   1. 친절하다고해서 일을 잘하는건 아님.
+   Being friendly and good at working is irrelavant.
+   To be specific, Being kind is good, but doing a good job is more important in the business
+   2. 좋은 동료는 솔직한 의견을 줄 수 있어야한다.
+   a good colleague(컬리그) should give some honest feedback.
+   but, sometimes friendly people hesitate when they give some honest feedback. because they don't want to hurt colleague(컬리그)'s feeling
+ 
+ [ 급여가 직업 만족도에 가장 큰 영향을 주는 요소라고 생각하는지 ]_동의
+   1. 돈이 많으면 내가 원하는것을 모든지 살 수 있다.
+    firstly, if i have enough money, i can buy whay ever i want.
+    to be specific, there is nothing happier than eating delicious food and buying what i want.
+
+  2. 많은 사람들은 그들의 노력을 돈으로 보상받기를 원한다.
+  many people want to be compensated their effor with money
+   for example, when i worked as an intern, i worked overtime a lot. but it was okay because i received a lot of money.
+
+  [ 직원채용 시 고려해야 할 사항 ] _업무 경험
+   1. 회사가 빠르게 성장할 수 있다.
+   The company can grow up quickly. 
+   they can save money and time about educating their employee. also experienced employee work effectivly
+   2. 경험이 많으면 문제를 빨리 해결할 수 있다.
+    a person who has a lot of experience can solve a critical problem quickly
+    for example, when i worked as a intern, my colleague had two years of experience.
+    whenever something wrong, he fixed it quickly.
+
+  [누구와 일을 더 하고싶은지]_ 일잘하는 상사 
+  1. 일을 효율적으로 처리할 수 있음.
+   tasks will be finished more efficiently
+   a boss who is good at his job organizes teams well and distributes tasks efficiently.
+
+  2. 실용적인 업무기술을 배울 수 있다.
+  i can grow up faster.
+  i can laen practical job skills.
+
+   
+    
+ 
+
+---------------------------------------------------------------------------------------
 예시답안 1 ( 재택근무 찬반 )
 
-서론 : I agree that working from home is as effective as working from the office for a few reasons
+서론 : I disagree that working from home is as effective as working from the office for a few reasons
 
-이유 1 : Firstly, I can get work-related information on the internet anytime, anywhere.
-근거 1 : To be specific, the materials I need for work are digitized. so I can access the same information at home as I could at the office
-이유 2 : Secondly, It can save commuting time and save physical strength. 
-근거 2 : Many people are stressed out by traffic congestion and exhausted(이그저스티드) when they arrive at work.
+이유 1 : Firstly, we can solve the critical problem quickly when we are working from the office
+근거 1 : To be specific, we can held staff meeting whenever we want. and then we can make a decision base on majority opinion. many staff are satisfied with it
+이유 2 : Secondly, we can share information about our work right away.
+근거 2 : for example, when i was a intern at kb finantial group, i request some report to other department. and then i can get it right a way
+        so i can submit it in time
 마무리 : Therefore, I think working from home is as good as going in to the office 
 
 예시답안2 (요즘 아이들이 공부를 더 많이하는지)
 서론 : I agree that children these days syudy more than in the past for a few reasons.
 이유1 : firstly, children can easily access the internet with mobile phones and other devices and they can stuy on it
-근거1 : for example, my friends's sone is interested in computer programming. he study coding everyday after school
+근거1 : for example, my friends's son is interested in computer programming. he study coding everyday after school
 이유2 : Secondly, there is more competition these days.
 근거2 : to be specific, many people think that To get a good job, we have to graduate from a good university. 
 마무리 : therefore children these days syudy more than in the past for a few reasons.
@@ -58,3 +129,5 @@ PART5.  ( 10번 문제 )
 이유2 : Secondly, i can lean about how to deal with new people.
 근거2 : To be specific, there will be a lot of new oppertunit to meet various people. it is very essential for a young person like you. 
 마무리 : therefore, i would probably spend mony on travle
+
+------------------------------------------------------------------------------------------------
