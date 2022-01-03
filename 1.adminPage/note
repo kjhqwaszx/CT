@@ -1,0 +1,66 @@
+[ 웹 개발자 ]
+
+- 웹디자이너 : 포토샵, 일러스트레이터 등을 활용한 그래픽 작업
+- 웹퍼블리셔 : 디자인으로부터 나오는 HTML Mark-up 제공
+- 프론트 개발자 : HTML, CSS, JS를 사용한 UI 구축, React, Angular, Vue 프레임웍 등, 백앤드와 통신하여 데이터를 화면에 제공
+- 백앤드 개발자 : jsp, spring, php 등, 데이터베이스로부터 데이터를 가공하여 클라이언트에게 제공
+
+
+< Spring boot >
+기존 Spring에서는 사용할 라이브러리들을 개별적으로 설치해야했고, 버전충돌 등 여러 문제가 있었다.
+Spring boot는 spring에서 개발할때 필요한 라이브러리들을 제공하고, Tomcat을 내장하고있다.
+
+< Lombok >
+: 라이브러리의 일종으로 어노테이션을 통해 코드를 깔끔하고 편리하게 짤 수 있게해준다.
+ex) SearchParam.java 에서 생성자, get,set Method를 설정해야하는데,
+ @Data 를 써주면 안만들어도 된다.
+ @AllArgsConstructor 를 사용하면 parameter 별 생성자 생성
+@Data
+public class SearchParam{
+    private String account;
+    private String email;
+    private int page;
+}
+
+< JPA(Java Persistent API) >
+ : 데이터베이스의 정보를 객체지향으로 손쉽게 활용할 수 있도록 도와주는 도구이다.
+   JPA에서는 테이블을 자동으로 생성해주는 기능이 존재한다.
+
+   @Entity : 해당 Class가 Entity임을 명시
+   @Table : 실제 DB테이블의 이름을 명시
+   @Id : Index Primary key를 명시
+   @Column : 실제 DB Column의 이름을 ㅁ ㅕㅇ시
+   @GeneratedValue : Primary key 식별키의 전략 설정
+ @
+
+< File Tree >
+Controller : 사용자가 접속할 주소들의 묶음.
+  >GetController
+  >PostController
+model 
+ > Entity
+   >User : DB
+ > SearchParam : 파라메터 객체
+repository : 쿼리문을 작성하지 않아도 CRUD를 사용할 수 있도록 해준다.
+ > UserRepository(인터페이스) 
+ 
+
+
+<Rest API>
+* HTTP GET Method
+  - 주소창에 파라메터가 노출된다.
+  - 브라우저에서 주소에 대한 캐시가 이루어지므로, 정보를 얻을때 사용한다.
+
+* HTTP POST Method
+  - 주소창에 파라메터가 노출되지 않는다.
+  - Get 방식에는 주소 길이 제한이 있지만 POST는 그보다 길게 사용가능
+     ( post는 http body에 데이터를 넣어 보낸다. )
+  - 브라우저의 주소 캐시를 하지못한다.
+
+< 어노테이션 >
+//   request에 대한 매핑이다. method에 GET, POST를 설정하고, 주소설정
+@RequestMapping(method =RequestMethod.GET , path = "/getMethod")
+
+
+
+
