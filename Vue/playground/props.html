@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <!-- <app-header v-bind:프롭스 속성 이름 = "상위 컴포넌트의 데이터 이름"></app-header> -->
+        <app-header :propsdata="message"></app-header>
+        <app-content :propsdata="num"></app-content>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        var appHeader = {
+            template: '<h1>{{propsdata}}</h1>',
+            props:['propsdata']
+        }
+
+        var appContent ={
+            template: '<div>{{propsdata}}</div>',
+            props:['propsdata']
+        }
+        new Vue({
+            el: '#app',
+            components: {
+                'app-header': appHeader,
+                'app-content': appContent
+            },
+            data:{
+                message:'hello',
+                num:10
+            }
+        })
+    </script>
+</body>
+</html>
+
+<!-- 
+    상위컴포넌트에서 하위컴포넌트로 데이터 전달은 props로 넘겨주고,
+    하위 컴포넌트에서 상위 컴포넌트로 데이터 전달은 event로 전달한다.
+
+ -->
