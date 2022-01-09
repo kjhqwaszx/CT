@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        {{ num }}
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        new Vue({
+            el:'#app',
+            data:{
+                num:10
+            },
+            computed:{
+                // 선언된 가변 데이터를 가지고 단순 계산할 목적
+                // computed에는 return 값이 있어야 한다.
+                doubleNum(){
+                    return this.num *2
+                }
+            },
+            watch:{
+                num(newValue){
+                    this.fetchUserByNumber(newValue)
+                }
+            },
+            methods:{
+                fetchUserByNumber(num){
+                    console.log(num);
+                    
+                }
+            }
+        })
+    </script>
+</body>
+</html>
