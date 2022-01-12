@@ -1,28 +1,41 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <appHeader :propsdata="str" @renew="renewStr"></appHeader>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import AppHeader from './components/AppHeader.vue'
+export default{
 
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
+  // new Vue({
+  //   data:{
+  //     str: 'hi'
+  //   }
+  // })
+  /* 
+     위와 같이 data를 객체로 선언해 주었는데,
+     컴포넌트 동일한 값을 참조하면 안되기 때문에
+     함수로 만들어서 객체를 return 해주어야한다.
+  */
+
+  data(){
+    return{
+      str: 'Header'
+    }
+  },
+
+  components:{
+    'appHeader': AppHeader
+  },
+  methods:{
+    renewStr(){
+      this.str = 'hi'
+    }
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
 </style>
